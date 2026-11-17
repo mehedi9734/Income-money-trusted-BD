@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="বাংলা প্যাকেজ অর্ডার ও টাস্ক ড্যাশবোর্ড">
+  <title>আমার আর্নিং প্ল্যাটফর্ম</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#"><span class="brand-mark">৳</span><span id="siteName">Income money trusted BD</span></a>
+    <nav>
+      <a href="#packages">প্যাকেজ</a><a href="#tasks">আয়ের টাস্ক</a><a href="#payments">পেমেন্ট</a><a href="#admin">অ্যাডমিন</a>
+    </nav>
+    <div class="auth-actions">
+      <button class="btn btn-light" id="loginOpen">লগইন</button>
+      <button class="btn btn-primary" id="registerOpen">রেজিস্ট্রেশন</button>
+      <button class="btn btn-light hidden" id="logoutBtn">লগআউট</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow">বাংলাদেশি ব্যবহারকারীদের জন্য</span>
+        <h1>আপনার কাজ, আপনার অগ্রগতি</h1>
+        <p>প্যাকেজ দেখুন, অর্ডার করুন এবং যোগ্যতা অনুযায়ী অনুমোদিত অনলাইন টাস্ক সম্পন্ন করুন।</p>
+        <div class="hero-actions"><a class="btn btn-primary" href="#packages">প্যাকেজ দেখুন</a><a class="btn btn-outline" href="#tasks">টাস্ক দেখুন</a></div>
+        <small>ডেমো সংস্করণ — বাস্তব লেনদেন বা নিশ্চিত আয়ের প্রতিশ্রুতি নয়।</small>
+      </div>
+      <div class="hero-card">
+        <div class="coin">৳</div><p class="muted">আপনার ড্যাশবোর্ড</p>
+        <div class="balance" id="heroBalance">৳০.০০</div>
+        <span class="pill">ডেমো ব্যালেন্স</span>
+      </div>
+    </section>
+
+    <section class="stats" id="dashboard">
+      <article><span>অ্যাকাউন্ট</span><strong id="userStatus">লগইন করা নেই</strong></article>
+      <article><span>ডেমো ব্যালেন্স</span><strong id="balance">৳০.০০</strong></article>
+      <article><span>আপনার অর্ডার</span><strong id="orderCount">০</strong></article>
+    </section>
+
+    <section class="section" id="packages">
+      <div class="section-heading"><div><span class="eyebrow">পছন্দমতো বেছে নিন</span><h2>আমাদের প্যাকেজ</h2></div><p>মূল্য বাংলাদেশি টাকা (BDT)</p></div>
+      <div class="cards" id="packageList"></div>
+    </section>
+
+    <section class="section task-section" id="tasks">
+      <div class="section-heading"><div><span class="eyebrow">দক্ষতা ও কাজ</span><h2>আয়ের টাস্ক</h2></div><p>প্রতিটি টাস্কের শর্ত আগে পড়ুন</p></div>
+      <div class="cards">
+        <article class="task-card"><div class="task-icon">▶</div><h3>ভিডিও টাস্ক</h3><p>অনুমোদিত বিজ্ঞাপনদাতার ভিডিও দেখুন এবং নির্দেশনা অনুযায়ী কুইজ/যাচাই সম্পন্ন করুন।</p><span class="pill muted-pill">স্পনসর ও যাচাই সাপেক্ষে</span><button class="btn btn-outline task-btn" data-task="ভিডিও টাস্ক">বিস্তারিত / শুরু</button></article>
+        <article class="task-card"><div class="task-icon">✉</div><h3>ইমেইল মার্কেটিং</h3><p>শুধু সম্মতিপ্রাপ্ত গ্রাহকের কাছে বৈধ প্রচারণা; স্প্যাম বা অনুমতিহীন মেইল নয়।</p><span class="pill muted-pill">অনুমোদন সাপেক্ষে</span><button class="btn btn-outline task-btn" data-task="ইমেইল মার্কেটিং">বিস্তারিত / শুরু</button></article>
+        <article class="task-card"><div class="task-icon">▣</div><h3>সোশ্যাল মিডিয়া রিলস</h3><p>ব্র্যান্ড-অনুমোদিত কনটেন্ট দেখা, রিভিউ বা নির্ধারিত বৈধ কাজ সম্পন্ন করুন।</p><span class="pill muted-pill">প্ল্যাটফর্মের নিয়ম প্রযোজ্য</span><button class="btn btn-outline task-btn" data-task="সোশ্যাল মিডিয়া রিলস">বিস্তারিত / শুরু</button></article>
+      </div>
+      <p class="notice">এই ডেমোতে কোনো টাস্কের জন্য স্বয়ংক্রিয় টাকা যোগ হয় না। বাস্তবে চালুর আগে বিজ্ঞাপনদাতা, টাস্ক যাচাই, শর্তাবলি এবং পেমেন্ট ফান্ড নিশ্চিত করতে হবে। ভুয়া ভিউ, স্প্যাম, বট বা প্ল্যাটফর্মের নিয়ম ভঙ্গ করে এমন কাজ অনুমোদিত নয়।</p>
+    </section>
+
+    <section class="section" id="payments">
+      <div class="section-heading"><div><span class="eyebrow">সহজ পেমেন্ট</span><h2>পেমেন্টের মাধ্যম</h2></div><p>নিজের তথ্য বসিয়ে নিন</p></div>
+      <div class="payment-grid">
+        <div class="payment-item"><b>bKash</b><span data-pay="bkash">আপনার বিকাশ নম্বর</span></div>
+        <div class="payment-item"><b>Nagad</b><span data-pay="nagad">আপনার নগদ নম্বর</span></div>
+        <div class="payment-item"><b>Rocket</b><span data-pay="rocket">আপনার রকেট নম্বর</span></div>
+        <div class="payment-item"><b>Bank</b><span data-pay="bank">ব্যাংক অ্যাকাউন্টের তথ্য</span></div>
+        <div class="payment-item"><b>Binance</b><span data-pay="binance">আপনার Binance Pay ID</span></div>
+        <div class="payment-item"><b>Crypto</b><span data-pay="crypto">কয়েন / নেটওয়ার্ক / ওয়ালেট</span></div>
+      </div>
+      <p class="notice warning">পেমেন্টের তথ্য এখন নমুনা/প্লেসহোল্ডার। নিজের সঠিক তথ্য বসান। ক্রিপ্টো লেনদেনে নেটওয়ার্ক ও আইনগত বিধিনিষেধ যাচাই করুন। কখনো পাসওয়ার্ড, OTP, seed phrase বা private key প্রকাশ করবেন না।</p>
+    </section>
+
+    <section class="section" id="admin">
+      <div class="section-heading"><div><span class="eyebrow">শুধু মালিকের জন্য</span><h2>অ্যাডমিন প্যানেল</h2></div><p>প্যাকেজ, অর্ডার ও পেমেন্ট তথ্য পরিচালনা</p></div>
+      <div class="admin-panel">
+        <div class="admin-login" id="adminLogin">
+          <p>অ্যাডমিন হিসেবে প্রবেশ করতে ডেমো পাসওয়ার্ড দিন।</p>
+          <label>অ্যাডমিন পাসওয়ার্ড<input id="adminPassword" type="password" placeholder="app.js-এর ADMIN_PASSWORD"></label>
+          <button class="btn btn-primary" id="adminLoginBtn">অ্যাডমিন লগইন</button>
+          <p class="admin-hint">ডেমো পাসওয়ার্ড app.js ফাইলে পরিবর্তন করুন। এটি নিরাপদ production authentication নয়।</p>
+        </div>
+        <div id="adminContent" class="hidden">
+          <div class="admin-toolbar"><strong>স্বাগতম, Ms Mehedi</strong><button class="btn btn-light" id="adminLogout">অ্যাডমিন লগআউট</button></div>
+          <div class="admin-grid">
+            <div><label>ওয়েবসাইটের নাম<input id="editSiteName"></label><button class="btn btn-outline" id="saveSiteName">নাম সংরক্ষণ</button></div>
+            <div><label>নতুন প্যাকেজের নাম<input id="newPackageName" placeholder="যেমন: Gold Package"></label><label>দাম (BDT)<input id="newPackagePrice" type="number" min="0" placeholder="500"></label><button class="btn btn-outline" id="addPackage">প্যাকেজ যোগ করুন</button></div>
+            <div><h3>প্যাকেজ তালিকা</h3><div id="adminPackages"></div></div>
+            <div><h3>অর্ডারসমূহ</h3><div id="adminOrders"></div></div>
+            <div><h3>পেমেন্ট তথ্য সম্পাদনা</h3>
+              <label>bKash<input id="payBkash"></label><label>Nagad<input id="payNagad"></label><label>Rocket<input id="payRocket"></label>
+              <label>Bank<input id="payBank"></label><label>Binance Pay ID<input id="payBinance"></label><label>Crypto wallet<input id="payCrypto"></label>
+              <button class="btn btn-outline" id="savePayments">পেমেন্ট তথ্য সংরক্ষণ</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section account-panel">
+      <div><span class="eyebrow">আপনার অ্যাকাউন্ট</span><h2>ড্যাশবোর্ড</h2><p id="welcomeText">লগইন করলে আপনার অর্ডার ও ডেমো ব্যালেন্স এখানে দেখাবে।</p></div>
+      <div class="account-actions"><button class="btn btn-primary" id="withdrawOpen">উইথড্র অনুরোধ</button><button class="btn btn-outline" id="ordersOpen">অর্ডার হিস্টোরি</button></div>
+    </section>
+  </main>
+
+  <footer><b id="footerName">Income money trusted BD · Owner: Ms Mehedi</b><span>© ২০২৬ · ডেমো ওয়েবসাইট · <a href="#packages">উপরে যান ↑</a></span></footer>
+
+  <dialog id="authDialog">
+    <form method="dialog" class="dialog-card" id="authForm">
+      <button class="close" value="cancel" aria-label="বন্ধ করুন">×</button>
+      <h2 id="authTitle">রেজিস্ট্রেশন</h2>
+      <label>আপনার নাম<input id="authName" autocomplete="name" placeholder="নাম লিখুন"></label>
+      <label>ইমেইল<input id="authEmail" type="email" required autocomplete="email" placeholder="name@example.com"></label>
+      <label>পাসওয়ার্ড<input id="authPassword" type="password" required minlength="6" autocomplete="current-password" placeholder="কমপক্ষে ৬ অক্ষর"></label>
+      <p class="form-error" id="authError"></p>
+      <button class="btn btn-primary full" id="authSubmit" value="default">অ্যাকাউন্ট তৈরি করুন</button>
+      <button type="button" class="switch-link" id="authSwitch">আগে অ্যাকাউন্ট আছে? লগইন</button>
+    </form>
+  </dialog>
+
+  <dialog id="actionDialog"><form method="dialog" class="dialog-card"><button class="close" value="cancel">×</button><h2 id="actionTitle">বিস্তারিত</h2><p id="actionText"></p><label id="actionLabel">তথ্য<input id="actionInput" placeholder="এখানে লিখুন"></label><button class="btn btn-primary full" id="actionConfirm" value="default">জমা দিন</button></form></dialog>
+  <div class="toast" id="toast" role="status"></div>
+  <script src="app.js"></script>
+</body>
+</html>
